@@ -1,0 +1,42 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Droid Sans', sans-serif;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+div.emojis {
+  font-size: 180%;
+  padding: 0.5em 0;
+}
+div.content {
+  width: 1024px;
+  margin: 1em auto;
+  text-align: justify;
+}
+div.header img {
+  border-radius: 20px;
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+}
+div.header strong {
+  display: block;
+}
+p {
+  clear: both;
+}
+a, a:visited, a:active, a:link, a:hover {
+  color: #db2777;
+}
+a:hover {
+  text-decoration: underline;
+}
+footer {
+  background-image: url('images/mariozone-area2.png');
+  background-repeat: no-repeat;
+  background-position: -505px -2px;
+  height: 250px;
+  margin-top: 5em;
+}
