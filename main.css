@@ -1,21 +1,36 @@
 body {
-  background-color: #F8F8F8;
+  background-color: white;
   font-family: 'Droid Sans', sans-serif;
 }
 h1 {
   margin: 0;
   padding: 0;
+  font-weight: 200;
+}
+h2 {
+  font-weight: 200;
 }
 div.emojis {
   font-size: 180%;
   padding: 0.5em 0;
 }
+div.emojis span {
+  display: inline-block;
+  margin: 0 0.2em 0 0;
+  cursor: default;
+  transition: scale 0.2s;
+}
+div.emojis span:hover {
+  scale: 1.2;
+}
 div.content {
-  width: 1024px;
+  max-width: 1024px;
   margin: 1em auto;
   text-align: justify;
+  padding: 0 1em;
 }
-div.header img {
+img.me {
+  float: left;
   border-radius: 20px;
   width: 200px;
   height: 200px;
@@ -38,5 +53,50 @@ footer {
   background-repeat: no-repeat;
   background-position: -505px -2px;
   height: 250px;
-  margin-top: 5em;
+  margin-top: 120px;
+  position: relative;
+}
+footer::before {
+  content: '';
+  display: block;
+  height: 100px;
+  width: 100%;
+  position: relative;
+  top: -100px;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%); 
+}
+img.stanford {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  z-index: -1;
+}
+.flip {
+  transform: scaleX(-1);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0 0 0 1em;
+}
+ul li {
+  text-indent: -1em;
+}
+footer img {
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
 }
